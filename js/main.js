@@ -27,4 +27,13 @@ sliderBtnPrev.addEventListener('click',function(){
    console.log(slideValue);
    slider.style.left = -slideValue + "px";
 })
-
+$('.nft-wrap').hide(0)
+$('#open-galary').click(function(e){
+   $('.nft-wrap').slideToggle(1000)
+   if($('#open-galary').text() == "Hide all"){
+      $('#open-galary').text('View all')
+   }  else if($('#open-galary').text() == "View all") {
+      $('#open-galary').text('Hide all')
+   }
+   e.preventDefault()
+})
